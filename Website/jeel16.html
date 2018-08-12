@@ -1,0 +1,65 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="jeel4.css">
+
+
+
+
+
+</head>
+<body>
+<div id="container">
+<video id="myVideo"  controls>
+<source src="C:\Users\vatsal\Videos\MOVIES\hollywood\star wars\Star-Wars--Episode-V---The-Empire-Strikes-Back--1980--Hindi-Dubbed-BluRay-2.avi" type="video/avi">
+
+Your browser does not support the video tag.
+
+</video>
+
+<button  onclick="getPlaySpeed()" type="button">current speed</button>
+<button  onclick="setPlaySpeed()" type="button">2x</button>
+<button  onclick="setPlaySpeed2()" type="button">4x</button>
+<button  onclick="Reset()" type="button">Reset</button>
+<button  onmouseover="skip()" type="button">Forward</button>
+<button  onmouseover="backward()" type="button">rewind</button>
+<button  onclick="likes()" type="button">likes</button>
+
+<script>
+var jk=document.getElementById("myVideo");
+
+
+function skip()
+{
+	jk.currentTime=jk.currentTime+10;
+}
+function likes()
+{
+	alert("You liked this video");
+	}
+function backward()
+{
+	jk.currentTime=jk.currentTime-10;
+}
+function getPlaySpeed()
+{
+	alert(jk.playbackRate);
+}
+
+function setPlaySpeed()
+{
+	jk.playbackRate=2;
+}
+function setPlaySpeed2()
+{
+	jk.playbackRate=4;
+}
+function Reset()
+{
+	jk.playbackRate=1;
+}
+
+</script>
+</body>
+
+</html>
